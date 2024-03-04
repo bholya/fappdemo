@@ -221,11 +221,11 @@ input:-moz-placeholder {
     border-radius: 8px !important;
 }
 
-.accordion-header{
+.accordion-header {
     border-radius: 8px;
 }
 
-.accordion-button{
+.accordion-button {
     color: #14261C;
     border-radius: 8px !important;
 }
@@ -255,7 +255,7 @@ input:-moz-placeholder {
     margin-top: -6px;
 }
 
-.section_names{
+.section_names {
     list-style: none;
     padding-left: 0;
     background-color: #F1F7ED;
@@ -264,35 +264,43 @@ input:-moz-placeholder {
     width: 100%;
 }
 
-.section_names li{
+.section_names li {
     padding: 0 12px;
     display: flex;
     align-items: center;
     margin-bottom: 16px;
 }
 
-.section_names li img{
+.section_names li img {
     height: 20px;
     width: 20px;
     margin-right: 16px;
 }
 
-.image_size_24{
+.image_size_24 {
     height: 24px;
     width: 24px;
 }
 
-.flex-1{
+.flex-1 {
     flex: 1;
 }
 
-.section_names li:last-child{
+.section_names li:last-child {
     margin-bottom: 0;
 }
 
-.added_section_box{
+.added_section_box {
     background-color: #F1F7ED;
     border-radius: 8px;
     padding: 14px 12px;
     margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date_input_border{
+    border-bottom: 1px solid #243E36;
+    border-radius: 0;
 }
