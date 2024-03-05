@@ -25,7 +25,7 @@
                                 <img src="assets/images/add.svg" class="img-fluid" alt="add">
                             </button>
                             <div class="section_elements">
-                                <div class="added_section_box">
+                                <div class="added_section_box" onclick="toggleTechElements()">
                                     <h6 class="font_20 font_500 mb-0">Section Name</h6>
                                     <img src="assets/images/chevron-up.svg" class="img-fluid" alt="arrow">
                                 </div>
@@ -114,10 +114,51 @@
                                                     <button class="primary_btn w-100 font_18">Update</button>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                                    <button class="secondary_btn w-100 font_18">Show/Hide tech.
-                                                        fields</button>
+                                                    <button class="secondary_btn w-100 font_18"
+                                                        onclick="toggleTechFields()">Show/Hide tech. fields</button>
                                                 </div>
                                             </div>
+                                            <!-- Show/Hide Tech. Fields Coding Start -->
+                                            <div class="techFields">
+                                                <div class="row">
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                        <div class="mb_26">
+                                                            <label for="exampleFormControlInput17"
+                                                                class="form-label font_16">Data Key (tech. attribute)</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput17"
+                                                                placeholder="Data Key">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                        <div class="mb_26">
+                                                            <label for="exampleFormControlInput18"
+                                                                class="form-label font_16">Validation Rules (for example as regex)</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput18"
+                                                                placeholder="Validation Rules">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                        <div class="mb_26">
+                                                            <label for="exampleFormControlInput19"
+                                                                class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput19"
+                                                                placeholder="Permission">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                                        <div class="mb_26">
+                                                            <label for="exampleFormControlInput20"
+                                                                class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput20"
+                                                                placeholder="Permission">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                        <button class="primary_btn">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Show/Hide Tech. Fields Coding Start -->
                                         </div>
                                     </div>
                                 </div>
@@ -150,12 +191,12 @@
                                 <div class="mb_26">
                                     <h5 class="font_16">Mandatory field?</h5>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions1"
                                             id="inlineRadio1" value="option1">
                                         <label class="form-check-label" for="inlineRadio1">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions1"
                                             id="inlineRadio2" value="option2" checked>
                                         <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
@@ -199,9 +240,50 @@
                                         <button class="primary_btn w-100 font_18">Save</button>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <button class="secondary_btn w-100 font_18">Show/Hide tech. fields</button>
+                                        <button class="secondary_btn w-100 font_18" onclick="toggleTechFieldsShort()">Show/Hide tech. fields</button>
                                     </div>
                                 </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
+                                <div class="techFieldsShort">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput21"
+                                                    class="form-label font_16">Data Key (tech. attribute)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput21"
+                                                    placeholder="Data Key">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput22"
+                                                    class="form-label font_16">Validation Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput22"
+                                                    placeholder="Validation Rules">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput23"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput23"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput24"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput24"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <button class="primary_btn">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
                             </div>
                             <!-- Short Text Element Coding Ends -->
 
@@ -231,12 +313,12 @@
                                 <div class="mb_26">
                                     <h5 class="font_16">Mandatory field?</h5>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions3"
                                             id="inlineRadio3" value="option1">
                                         <label class="form-check-label" for="inlineRadio3">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions3"
                                             id="inlineRadio4" value="option2" checked>
                                         <label class="form-check-label" for="inlineRadio4">No</label>
                                     </div>
@@ -280,9 +362,50 @@
                                         <button class="primary_btn w-100 font_18">Save</button>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <button class="secondary_btn w-100 font_18">Show/Hide tech. fields</button>
+                                        <button class="secondary_btn w-100 font_18" onclick="toggleTechFieldsLong()">Show/Hide tech. fields</button>
                                     </div>
                                 </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
+                                <div class="techFieldsLong">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput25"
+                                                    class="form-label font_16">Data Key (tech. attribute)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput25"
+                                                    placeholder="Data Key">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput26"
+                                                    class="form-label font_16">Validation Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput26"
+                                                    placeholder="Validation Rules">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput27"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput27"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput28"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput28"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <button class="primary_btn">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
                             </div>
                             <!-- Long Text Element Coding Ends -->
 
@@ -312,12 +435,12 @@
                                 <div class="mb_26">
                                     <h5 class="font_16">Mandatory field?</h5>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5"
                                             id="inlineRadio5" value="option1">
                                         <label class="form-check-label" for="inlineRadio5">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5"
                                             id="inlineRadio6" value="option2" checked>
                                         <label class="form-check-label" for="inlineRadio6">No</label>
                                     </div>
@@ -361,9 +484,50 @@
                                         <button class="primary_btn w-100 font_18">Save</button>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <button class="secondary_btn w-100 font_18">Show/Hide tech. fields</button>
+                                        <button class="secondary_btn w-100 font_18" onclick="toggleTechFieldsNumbers()">Show/Hide tech. fields</button>
                                     </div>
                                 </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
+                                <div class="techFieldsNumbers">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput29"
+                                                    class="form-label font_16">Data Key (tech. attribute)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput29"
+                                                    placeholder="Data Key">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput30"
+                                                    class="form-label font_16">Validation Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput30"
+                                                    placeholder="Validation Rules">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput31"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput31"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput32"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput32"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <button class="primary_btn">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
                             </div>
                             <!-- Number Element Coding Ends -->
 
@@ -393,12 +557,12 @@
                                 <div class="mb_26">
                                     <h5 class="font_16">Mandatory field?</h5>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions7"
                                             id="inlineRadio7" value="option1">
                                         <label class="form-check-label" for="inlineRadio7">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions7"
                                             id="inlineRadio8" value="option2" checked>
                                         <label class="form-check-label" for="inlineRadio8">No</label>
                                     </div>
@@ -454,9 +618,50 @@
                                         <button class="primary_btn w-100 font_18">Save</button>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <button class="secondary_btn w-100 font_18">Show/Hide tech. fields</button>
+                                        <button class="secondary_btn w-100 font_18" onclick="toggleTechFieldsDate()">Show/Hide tech. fields</button>
                                     </div>
                                 </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
+                                <div class="techFieldsDate">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput33"
+                                                    class="form-label font_16">Data Key (tech. attribute)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput33"
+                                                    placeholder="Data Key">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput34"
+                                                    class="form-label font_16">Validation Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput34"
+                                                    placeholder="Validation Rules">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput35"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput35"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput36"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput36"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <button class="primary_btn">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
                             </div>
                             <!-- Date Element Coding Ends -->
 
@@ -534,9 +739,9 @@
                                             <div class="input-group">
                                                 <input type="text" class="form-control" id="timepicker"
                                                     placeholder="Select time">
-                                                <button class="btn date_input_border" type="button"
-                                                    id="toggle-btn">
-                                                    <img src="assets/images/time-picker.svg" class="img-fluid" alt="time">
+                                                <button class="btn date_input_border" type="button" id="toggle-btn">
+                                                    <img src="assets/images/time-picker.svg" class="img-fluid"
+                                                        alt="time">
                                                 </button>
                                             </div>
                                         </div>
@@ -547,9 +752,50 @@
                                         <button class="primary_btn w-100 font_18">Save</button>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <button class="secondary_btn w-100 font_18">Show/Hide tech. fields</button>
+                                        <button class="secondary_btn w-100 font_18" onclick="toggleTechFieldsTime()">Show/Hide tech. fields</button>
                                     </div>
                                 </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
+                                <div class="techFieldsTime">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput37"
+                                                    class="form-label font_16">Data Key (tech. attribute)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput37"
+                                                    placeholder="Data Key">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput38"
+                                                    class="form-label font_16">Validation Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput38"
+                                                    placeholder="Validation Rules">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput39"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput39"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <div class="mb_26">
+                                                <label for="exampleFormControlInput40"
+                                                    class="form-label font_16">Permission Rules (for example as regex)</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput40"
+                                                    placeholder="Permission">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <button class="primary_btn">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Show/Hide Tech. Fields Coding Start -->
                             </div>
                             <!-- Time Element Coding Ends -->
                         </div>
