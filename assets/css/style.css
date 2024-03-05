@@ -256,6 +256,7 @@ input:-moz-placeholder {
 }
 
 .section_names {
+    display: none;
     list-style: none;
     padding-left: 0;
     background-color: #F1F7ED;
@@ -300,7 +301,41 @@ input:-moz-placeholder {
     justify-content: space-between;
 }
 
+.added_section_box:hover {
+    cursor: pointer;
+}
+
 .date_input_border{
     border-bottom: 1px solid #243E36;
     border-radius: 0;
+}
+
+.techFields {
+    display: none;
+    margin-top: 26px;
+}
+
+.techFieldsShort {
+    display: none;
+    margin-top: 26px;
+}
+
+.techFieldsLong {
+    display: none;
+    margin-top: 26px;
+}
+
+.techFieldsNumbers {
+    display: none;
+    margin-top: 26px;
+}
+
+.techFieldsDate {
+    display: none;
+    margin-top: 26px;
+}
+
+.techFieldsTime {
+    display: none;
+    margin-top: 26px;
 }
