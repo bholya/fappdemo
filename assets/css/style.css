@@ -339,3 +339,38 @@ input:-moz-placeholder {
     display: none;
     margin-top: 26px;
 }
+
+.techFieldsChoice {
+    display: none;
+    margin-top: 26px;
+}
+
+.modal-header{
+    border-bottom: none;
+}
+
+.modal-body{
+    padding-bottom: 0;
+}
+
+.modal-footer{
+    border-top: none;
+    padding-top: 0;
+}
+
+#displayArea{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.added_label{
+    padding: 4px 8px 4px 8px;
+    background-color: #243E36;
+    border-radius: 30px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
